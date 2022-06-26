@@ -1,0 +1,17 @@
+# Compose file for Alastria RedT node
+services:
+  regularnode:
+    image: quorumengineering/quorum:21.10.0
+    container_name: "regularnode"
+    restart: unless-stopped
+    volumes:
+      - "./data_dir:/root/alastria/data_dir"
+      - "./config:/root/alastria/config"
+      - "./secrets:/root/alastria/secrets"
+    ports:
+      - "21000:21000/tcp"
+      - "21000:21000/udp"
+      - "22000:22000/tcp"
+      - "22001:22001/tcp"
+      - "22001:22001/udp"
+    entrypoint: ["/root/alastria/config/entrypoint.sh"]
