@@ -35,15 +35,15 @@ Once the node is installed, connected to the network and operating successfully,
 ```bash
 ├── config
 │   ├── entrypoint.sh
-│   ├── permissioned-nodes.sh
-│   └── static-nodes.sh
+│   ├── permissioned-nodes.json
+│   └── static-nodes.json
 ├── data_dir
 │   ├── geth
 │   │   └── <contents of the blockchain database>
 │   ├── keystore
 │   │   └── <normally empty, unless you manage wallet accounts in the node>
-│   ├── permissioned-nodes.sh
-│   └── static-nodes.sh
+│   ├── permissioned-nodes.json
+│   └── static-nodes.json
 ├── secrets
 │   └── nodekey
 ├── compose.yaml
